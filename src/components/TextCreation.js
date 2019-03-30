@@ -4,10 +4,10 @@ var AddVerbs = ["весело", "смешно", "красиво", "честно"
 var Verbs = ["мылся", "прыгал", "пукал", "восхищался", "насмехался", "ругался", "бесился", "играл", "срал"]
 var PlasesIn = ["бане", "оболочке", "луже", "яме", "доме", "машине", "самолете", "песочнице", "хлеву", "углу", "тубзике", "сортире"]
 var PlasesOn = ["балконе", "крыше", "лужайке", "марсе", "луне", "земле", "жаре", "холоде", "столе", "скамейке", "посту", "шкафу"]
-function Word(arr,exclude) {
+function Word(arr, exclude) {
     var ind = Math.floor(Math.random() * arr.length);
     var word = arr[ind];
-    if (exclude!=null && exclude.includes(word)) {
+    if (exclude != null && exclude.includes(word)) {
         word = Word(arr, exclude);
     }
     return word;
@@ -27,14 +27,11 @@ function TRANSLATE(txt, dir = "ru-en") {
     }
 };
 
-
-
 function GetSentation1() {
-
     var adjective1 = Word(Adjectives);
     var s =
         adjective1 + ' и ' +
-        Word(Adjectives, new Array()[ adjective1]) + ' ' +
+        Word(Adjectives, new Array()[adjective1]) + ' ' +
         Word(Nouns) + ' ' +
         Word(AddVerbs) + ' ' +
         Word(Verbs);

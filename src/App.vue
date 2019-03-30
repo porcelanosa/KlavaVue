@@ -1,19 +1,16 @@
 <template>
-
-    <klava    />
-
+  <klava/>
 </template>
 
 <script>
- //   import { TextCreation } from './components/TextCreation.js'; 
+//   import { TextCreation } from './components/TextCreation.js';
 import klava from "./components/klava.vue";
 export default {
   name: "app",
   components: {
     klava
   }
-    };
-   
+};
 </script>
 
 <style>
@@ -24,6 +21,5 @@ export default {
   text-align: left;
   color: #2c3e50;
   margin-top: 0px;
-  
 }
 </style>
